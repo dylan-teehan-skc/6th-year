@@ -1,0 +1,30 @@
+enter = float(input("click 1 for net to gross,click 2 for gross to net: "))
+
+def nettogross():
+    print ("")
+    print ("Net to Gross Calculator")
+    net = int(input("Enter your net income: "))
+    tax = 0.0
+    if net < 36800:
+                tax = net*0.20 
+    elif tax>36800: tax=net*0.10
+    else:
+        tax=(net-85528)*.32 + 14839.02
+    tax = round(tax,0)
+    print("The tax is:", tax)
+    print("gross pay is:",tax + net)
+
+def grosstonet():
+    print("")
+    print("Gross to Net Calculator")
+    gross = int(input("Enter your gross income: "))
+    tax1 = int(input("Enter your tax percentage:"))
+    tax2 = tax1/(100)
+    net = gross * tax2
+    print ("your tax is" , gross - net)
+    print ("your net profit is" , net )
+    
+if enter == 1:
+    nettogross()
+elif enter == 2:
+    grosstonet()
