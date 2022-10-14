@@ -1,0 +1,10 @@
+#https://nccaleavingcertdb.firebaseio.com/
+from firebase import firebase
+
+myDBConn = forebase.FirebaseApplication('https://nccaleavingcertdb.firebaseio.com/', None)
+data = {
+    'name' : 'keith',
+    'age' : 21
+    }
+
+myDBConn.post('/keithsData/myContacts/',data)
